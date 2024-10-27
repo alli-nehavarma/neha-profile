@@ -1,10 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Neha Alli | Portfolio</title>
+   <style>
+       /* Base Styles */
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+       }
+       body {
+           background-color: #f4f5f7;
+           color: #333;
+           line-height: 1.6;
+           overflow-x: hidden;
+       }
+
+
+       /* Parallax Background */
+       .parallax {
+           background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1920&q=80'); /* Unsplash placeholder image */
+           height: 60vh;
+           background-attachment: fixed;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: #fff;
+           text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+       }
+       .parallax h1 {
+           font-size: 3rem;
+       }
+       /* Add consistent padding to grid sections */
+.grid {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 20px; /* Add this line to ensure consistent padding */
+}
+
+
+       
+       /* Container */
+       .container {
+           width: 80%;
+           max-width: 1000px;
+           margin: 30px auto;
+       }
+
+
+       /* Section Titles */
+       h2 {
+           color: #34495e;
+           font-size: 2rem;
+           border-bottom: 2px solid #3498db;
+           padding-bottom: 10px;
+           margin-bottom: 20px;
+           text-align: center;
+       }
+
+
+       /* About Section */
+       .about {
+           background: #ecf0f1;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+           margin-bottom: 50px;
+       }
+
+
+       /* Cards with Images */
+       .grid {
+           display: flex;
+           gap: 20px;
+           flex-wrap: wrap;
+           justify-content: center;
+       }
+       .card {
+           background: #fff;
+           border-radius: 8px;
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+           width: 45%;
+           padding: 20px;
+           text-align: center;
+           transition: transform 0.3s;
+       }
+       .card:hover {
+           transform: translateY(-5px);
+       }
+       .card img {
+           width: 100%;
+           height: 150px;
+           object-fit: cover;
+           border-radius: 6px;
+           margin-bottom: 15px;
+       }
+       .card h3 {
+           color: #2980b9;
+           font-size: 1.2rem;
+           margin-bottom: 8px;
+       }
+       .card p {
+           color: #7f8c8d;
+           font-size: 1rem;
+           line-height: 1.5;
+       }
+
+
+       /* Footer */
+       footer {
+           text-align: center;
+           color: #7f8c8d;
+           padding: 20px;
+           font-size: 0.9rem;
+           margin-top: 30px;
+       }
+       footer a {
+           color: #3498db;
+           text-decoration: none;
+       }
+
+
+       /* Animation */
+       .fade-in {
+           opacity: 0;
+           transform: translateY(20px);
+           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+       }
+       .fade-in.show {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   </style>
+   <script>
+       // Function to show elements on load
+       function showElements() {
+           document.querySelectorAll('.fade-in').forEach(function(element) {
+               element.classList.add('show');
+           });
+       }
+   
+       // Show content immediately on page load
+       document.addEventListener('DOMContentLoaded', showElements);
+   
+       // Additional scroll animation if desired
+       document.addEventListener('scroll', function () {
+           document.querySelectorAll('.fade-in').forEach(function(element) {
+               const rect = element.getBoundingClientRect();
+               if (rect.top < window.innerHeight) {
+                   element.classList.add('show');
+               }
+           });
+       });
+   </script>
+   
 </head>
 <body>
-Hello world
+
+
+   <!-- Parallax Header -->
+   <div class="parallax">
+       <h1>Neha Alli | Portfolio</h1>
+   </div>
+
+
+   <!-- Main Content -->
+   <div class="container">
+
+
+       <!-- About Me Section -->
+       <section class="about fade-in">
+           <h2>About Me</h2>
+           <p>
+               I am a driven and highly motivated student with a passion for technology and engineering. Having completed my intermediate studies with a focus on Science and Mathematics, I am seeking admission to a top-tier U.S. university to further my education in B.Tech. I bring a solid academic background, hands-on project experience, and a commitment to continuous learning and growth in the field of engineering.
+           </p>
+           <p>
+               My goal is to specialize in Computer Science or Electronics, particularly in areas such as AI, machine learning, and IoT, which align with my long-term career aspirations.
+           </p>
+       </section>
+
+
+       <!-- Certifications Section -->
+       <section class="fade-in">
+           <h2>Certifications & Skills</h2>
+           <div class="grid">
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=500&q=80" alt="Python Certification">
+                   <h3>Python Programming for Beginners</h3>
+                   <p>Gained foundational knowledge in Python, including data types, functions, and loops. This certification solidified my problem-solving skills and logical reasoning.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?fit=crop&w=500&q=80" alt="Data Science Certification">
+                   <h3>Data Science Essentials</h3>
+                   <p>Covered data analysis, manipulation, and visualization techniques. Developed a strong understanding of data science concepts and tools.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Web Development Certification">
+                   <h3>Web Development Bootcamp</h3>
+                   <p>Learned the essentials of HTML, CSS, JavaScript, and responsive design, building various projects to demonstrate these skills.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Google IT Support">
+                   <h3>Google IT Support Certificate</h3>
+                   <p>Developed skills in IT troubleshooting, networking, and operating systems, gaining a certification recognized globally by Google.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <!-- Awards Section -->
+       <section class="fade-in">
+           <h2>Awards & Recognitions</h2>
+           <div class="grid">
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80"" alt="Science Olympiad">
+                   <h3>Science Olympiad Top Performer</h3>
+                   <p>Ranked in the top 5% in a national-level competition, demonstrating a strong grasp of science and analytical skills.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?fit=crop&w=500&q=80" alt="Debate Champion">
+                   <h3>Inter-school Debate Champion</h3>
+                   <p>Earned first place in an inter-school debate competition, showcasing critical thinking and public speaking skills.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Academic Excellence">
+                   <h3>Excellence in Academics</h3>
+                   <p>Received a School Excellence Award for outstanding academic performance and active involvement in extracurricular activities.</p>
+               </div>
+               <div class="card">
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Volunteer Service">
+                   <h3>Volunteer Service Award</h3>
+                   <p>Recognized for community service, including tutoring and organizing events, displaying a strong sense of responsibility.</p>
+               </div>
+           </div>
+       </section>
+   </div>
+
+
+   <!-- Footer -->
+   <footer>
+       <p>Connect with me on <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
+   </footer>
+
+
 </body>
 </html>
