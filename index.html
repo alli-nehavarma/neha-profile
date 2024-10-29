@@ -1,255 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Neha Alli | Portfolio</title>
-   <style>
-       /* Base Styles */
-       * {
-           box-sizing: border-box;
-           margin: 0;
-           padding: 0;
-           font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-       }
-       body {
-           background-color: #f4f5f7;
-           color: #333;
-           line-height: 1.6;
-           overflow-x: hidden;
-       }
+  <meta charset="utf-8">
+  <title>Neha Varma - Portfolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Free Website Template" name="keywords">
+  <meta content="Free Website Template" name="description">
 
+  <!-- Favicon -->
+  <link href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/favicon.ico" rel="icon">
 
-       /* Parallax Background */
-       .parallax {
-           background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1920&q=80'); /* Unsplash placeholder image */
-           height: 60vh;
-           background-attachment: fixed;
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: cover;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           color: #fff;
-           text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-       }
-       .parallax h1 {
-           font-size: 3rem;
-       }
-       /* Add consistent padding to grid sections */
-.grid {
-   display: flex;
-   gap: 20px;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding: 20px; /* Add this line to ensure consistent padding */
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
+  <!-- CSS Libraries -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-       
-       /* Container */
-       .container {
-           width: 80%;
-           max-width: 1000px;
-           margin: 30px auto;
-       }
-
-
-       /* Section Titles */
-       h2 {
-           color: #34495e;
-           font-size: 2rem;
-           border-bottom: 2px solid #3498db;
-           padding-bottom: 10px;
-           margin-bottom: 20px;
-           text-align: center;
-       }
-
-
-       /* About Section */
-       .about {
-           background: #ecf0f1;
-           padding: 20px;
-           border-radius: 8px;
-           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-           margin-bottom: 50px;
-       }
-
-
-       /* Cards with Images */
-       .grid {
-           display: flex;
-           gap: 20px;
-           flex-wrap: wrap;
-           justify-content: center;
-       }
-       .card {
-           background: #fff;
-           border-radius: 8px;
-           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-           width: 45%;
-           padding: 20px;
-           text-align: center;
-           transition: transform 0.3s;
-       }
-       .card:hover {
-           transform: translateY(-5px);
-       }
-       .card img {
-           width: 100%;
-           height: 150px;
-           object-fit: cover;
-           border-radius: 6px;
-           margin-bottom: 15px;
-       }
-       .card h3 {
-           color: #2980b9;
-           font-size: 1.2rem;
-           margin-bottom: 8px;
-       }
-       .card p {
-           color: #7f8c8d;
-           font-size: 1rem;
-           line-height: 1.5;
-       }
-
-
-       /* Footer */
-       footer {
-           text-align: center;
-           color: #7f8c8d;
-           padding: 20px;
-           font-size: 0.9rem;
-           margin-top: 30px;
-       }
-       footer a {
-           color: #3498db;
-           text-decoration: none;
-       }
-
-
-       /* Animation */
-       .fade-in {
-           opacity: 0;
-           transform: translateY(20px);
-           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-       }
-       .fade-in.show {
-           opacity: 1;
-           transform: translateY(0);
-       }
-   </style>
-   <script>
-       // Function to show elements on load
-       function showElements() {
-           document.querySelectorAll('.fade-in').forEach(function(element) {
-               element.classList.add('show');
-           });
-       }
-   
-       // Show content immediately on page load
-       document.addEventListener('DOMContentLoaded', showElements);
-   
-       // Additional scroll animation if desired
-       document.addEventListener('scroll', function () {
-           document.querySelectorAll('.fade-in').forEach(function(element) {
-               const rect = element.getBoundingClientRect();
-               if (rect.top < window.innerHeight) {
-                   element.classList.add('show');
-               }
-           });
-       });
-   </script>
-   
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+<!-- Nav Bar Start -->
+<div class="navbar navbar-expand-lg bg-light navbar-light">
+  <div class="container-fluid">
+    <a href="index.html" class="navbar-brand">Neha Varma</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+        <a href="#home" class="nav-item nav-link active">Home</a>
+        <a href="#about" class="nav-item nav-link">About</a>
+        <a href="#experience" class="nav-item nav-link">Experience</a>
+        <a href="#portfolio" class="nav-item nav-link">Gallery</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Nav Bar End -->
 
 
-   <!-- Parallax Header -->
-   <div class="parallax">
-       <h1>Neha Alli | Portfolio</h1>
-   </div>
+<!-- Hero Start -->
+<div class="hero" id="home">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-6">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p>I'm</p>
+            <h1>Neha Varma</h1>
+            <h2></h2>
+            <div class="typed-text">Aspiring Computer Science undergraduate with a strong foundation in mathematics and
+              physics, seeking to leverage hands-on experience in software development and a passion for artificial
+              intelligence to contribute to innovative projects in a dynamic learning environment.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 d-none d-md-block">
+        <div class="hero-image">
+          <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/hero2.png?raw=true" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero End -->
 
 
-   <!-- Main Content -->
-   <div class="container">
+<!-- About Start -->
+<div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="about-img">
+          <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/ireland_2.jpg?raw=true" alt="Image">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-content">
+          <div class="section-header text-left">
+            <p>Learn About Me</p>
+            <h2>Technical Expertise</h2>
+          </div>
+          <div class="about-text">
+            <p>
+              I've gained hands-on experience in Python, HTML, and CSS through projects
+              like mobile app testing and developing a personal website.
+              Tackling Python challenges on platforms like HackerRank
+              has sharpened my skills, and collaborating on projects has taught me
+              the importance of teamwork and creativity.
+              I'm always eager to apply what I learn to real-world tech solutions
+              and keep growing in the field.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="skill-name">
+              <p>Python</p>
+              <p>70%</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                   aria-valuemax="100"></div>
+            </div>
+            <div class="skill-name">
+              <p>HTML</p>
+              <p>75%</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                   aria-valuemax="100"></div>
+            </div>
+            <div class="skill-name">
+              <p>CSS</p>
+              <p>70%</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                   aria-valuemax="100"></div>
+            </div>
+            <div class="skill-name">
+              <p>Mobile App Testing</p>
+              <p>60%</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                   aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+<!-- Experience Start -->
+<div class="experience" id="experience">
+  <div class="container">
+    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>My Resume</p>
+      <h2>Educational Details</h2>
+    </header>
+    <div class="timeline">
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2024 - 2025</div>
+          <h2>11th Grade</h2>
+          <h4>FIITJEE, Hyderabad, India</h4>
+          <p>
+            Focused on STEM subjects, including Mathematics, Physics, and Chemistry, building a strong academic
+            foundation.
+            Actively participated in extracurricular activities.
+            This period laid the groundwork for a career in computer science, fostering both technical skills and
+            personal growth.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2018 - 2019</div>
+          <h2>10th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            In 10th grade at DPS, I was elected as the House Captain, where I led my team in various competitions and
+            promoted school spirit. I also received a certificate for my performance in an Extempore competition,
+            showcasing my public speaking skills and confidence in presenting ideas spontaneously.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/10th_house_captain_2023.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/10th_house_captain_2023.jpg?raw=true" data-lightbox="portfolio">
+                    Elected as House Captain
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/10th_extempore_certificate.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/10th_extempore_certificate.jpg?raw=true" data-lightbox="portfolio">
+                    Extempore certificate
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2018 - 2019</div>
+          <h2>9th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            During 9th grade at DPS, I served as the Director of the Interact Club, where I was actively involved in
+            organizing community service projects and promoting leadership among students. Additionally, I earned the
+            Scholar Badge for my academic excellence, which recognized my commitment to maintaining high standards in my
+            studies.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/9th_director_Interact_club_2022.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/9th_director_Interact_club_2022.jpg?raw=true.jpg?raw=true" data-lightbox="portfolio">
+                    Director Interact Club
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/9th_scholar_certificate_2022.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/9th_scholar_certificate_2022.jpg?raw=true" data-lightbox="portfolio">
+                    Scholar Badge
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2017 - 2018</div>
+          <h2>7th & 8th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            During 7th and 8th grade at DPS, I did not receive any awards due to the challenges posed by the COVID-19
+            pandemic, which limited extracurricular activities and competitions. However, this period allowed me to
+            focus on self-study and personal development, enhancing my resilience and adaptability in facing new
+            challenges.
+          </p>
+          <br/>
+        </div>
+      </div>
+
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2018 - 2019</div>
+          <h2>6th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            In 6th grade at DPS, I secured 3rd place in the Reckonact Science Fair and achieved 1st place in the
+            assembly competition. These accomplishments not only showcased my commitment to academics but also
+            demonstrated my ability to engage effectively in collaborative and competitive environments. </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/6th_dps_reckonact_2018.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/6th_dps_reckonact_2018.jpg?raw=true.jpg?raw=true" data-lightbox="portfolio">
+                    3rd Place in Reckonact since fair
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/6th_assembly_2018.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/6th_assembly_2018.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place Assembly
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2017 - 2018</div>
+          <h2>5th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            In 5th grade at DPS, I was recognized as the Star of the Year and led my basketball team to victory in an
+            interschool competition. These achievements reflect my dedication to academics and sports, highlighting my
+            leadership and teamwork skills. This experience further fueled my passion for competition and collaboration.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/5th_star_2018.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/5th_star_2018.jpg?raw=true" data-lightbox="portfolio">
+                    Star of the year
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/5th_dps_basketball_2018.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/5th_dps_basketball_2018.jpg?raw=true" data-lightbox="portfolio">
+                    Basket ball winner
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2016 - 2017</div>
+          <h2>4th grade</h2>
+          <h4>DPS, Hyderabad, India</h4>
+          <p>
+            In 4th grade at DPS, I achieved 1st place in both the Maths Quiz and the Brain Bee competition, showcasing
+            my strong analytical skills and passion for learning. These accomplishments not only highlighted my
+            dedication to academic excellence but also fueled my enthusiasm for subjects like mathematics and science.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/4th_dps_brain_bee_2017.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/4th_dps_brain_bee_2017.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place in Maths Quiz
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/4th_dps_brain_bee_2017.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/4th_dps_brain_bee_2017.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place Brain Bee
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2015 - 2016</div>
+          <h2>3rd grade</h2>
+          <h4>Narayana e Champs, Hyderabad, India</h4>
+          <p>
+            In 3rd grade at Narayana e Champs, I secured 1st place in both the Maths Quiz and Essay Writing competition.
+            These accomplishments highlighted my strong analytical and creative skills. Engaging in these contests
+            fueled my passion for learning and problem-solving.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/3rd_maths_quiz_2016.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/3rd_maths_quiz_2016.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place in Maths Quiz
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/3rd_essay_writing_2016.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/3rd_essay_writing_2016.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place in Essay Writing
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2014 - 2015</div>
+          <h2>2nd grade</h2>
+          <h4>Narayana e Champs, Hyderabad, India</h4>
+          <p>
+            I was recognized as the Star of the Year in 2nd grade for my exceptional performance in academics and
+            extracurricular activities. I secured 1st place in a quiz competition and achieved an A1 grade in Abacus,
+            which was acknowledged at the zonal level. This experience reinforced my dedication to excellence in
+            learning and competition.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_star_2015.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_star_2015.jpg?raw=true" data-lightbox="portfolio">
+                    Star of the year
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_quiz_2015.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_quiz_2015.jpg?raw=true" data-lightbox="portfolio">
+                    1st Place in Quiz
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_abacus_2015.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_abacus_2015.jpg?raw=true" data-lightbox="portfolio">
+                    A1 grade in Abacus
+                  </a>
+                </h6>
+              </div>
+            </div>
+            <div class="portfolio-wrap  col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_abacus_2015_2.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text col-lg-12" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/2nd_abacus_2015_2.jpg?raw=true" data-lightbox="portfolio">
+                    Abacus - Zonal level
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+        <div class="timeline-text">
+          <div class="timeline-date">2011 - 2012</div>
+          <h2>Kinder Garden</h2>
+          <h4>St. Laurence O’ Toole’s, Dublin, Ireland</h4>
+          <p>
+            Attended kindergarten at St. Laurence O'Toole's in Dublin, where I was introduced to the
+            basics of learning in a nurturing environment. These foundational years sparked my
+            curiosity and built a love for discovery, which I carry forward in my educational
+            journey today.
+          </p>
+          <br/>
+          <div class="col-lg-12 row col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-wrap col-lg-6">
+              <div class="col-lg-12">
+                <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/kinder_star_2012.jpg?raw=true" alt="Image" style="height: 100%;width: 95%">
+              </div>
+              <div class="portfolio-text" style="text-align: center">
+                <h6>
+                  <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/kinder_star_2012.jpg?raw=true" data-lightbox="portfolio">
+                    Star of the year
+                  </a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Job Experience End -->
+
+<!-- Portfolio Start -->
+<div class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+      <p>My Gallery</p>
+      <h2>My Images</h2>
+    </div>
+
+    <div class="row portfolio-container">
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_1.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_1.png?raw=true" data-lightbox="portfolio">
+                @10th Grade
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_2.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_2.png?raw=true" data-lightbox="portfolio">@Cultural Event</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_3.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_3.png?raw=true" data-lightbox="portfolio">@Cultural Event</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_6.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_6.png?raw=true" data-lightbox="portfolio">
+                @Basketball Game
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_7.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_7.png?raw=true" data-lightbox="portfolio">
+                @Interact club
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_4.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_4.png?raw=true" data-lightbox="portfolio">@Investiture Ceremony</a>
+            </h5>
+          </div>
+        </div>
+      </div>
 
 
-       <!-- About Me Section -->
-       <section class="about fade-in">
-           <h2>About Me</h2>
-           <p>
-               I am a driven and highly motivated student with a passion for technology and engineering. Having completed my intermediate studies with a focus on Science and Mathematics, I am seeking admission to a top-tier U.S. university to further my education in B.Tech. I bring a solid academic background, hands-on project experience, and a commitment to continuous learning and growth in the field of engineering.
-           </p>
-           <p>
-               My goal is to specialize in Computer Science or Electronics, particularly in areas such as AI, machine learning, and IoT, which align with my long-term career aspirations.
-           </p>
-       </section>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha13.jpg?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha13.jpg?raw=true" data-lightbox="portfolio">@Westpac Office Sydney</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha14.jpg?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha14.jpg?raw=true" data-lightbox="portfolio">@Opera House</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha15.jpg?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/neha15.jpg?raw=true" data-lightbox="portfolio">
+                @Singapore
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_8.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_8.png?raw=true" data-lightbox="portfolio">@Taj Mahal</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_9.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_9.png?raw=true" data-lightbox="portfolio">@Science Museum</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_5.png?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/dps_5.png?raw=true" data-lightbox="portfolio">@My Farms</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+        <div class="portfolio-wrap">
+          <div class="portfolio-img">
+            <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/ireland_1.jpg?raw=true" alt="Image">
+          </div>
+          <div class="portfolio-text">
+            <h5>
+              <a href="https://github.com/alli-nehavarma/neha-profile/blob/main/img/ireland_1.jpg?raw=true" data-lightbox="portfolio">
+                @Kinder garden
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio End -->
 
 
-       <!-- Certifications Section -->
-       <section class="fade-in">
-           <h2>Certifications & Skills</h2>
-           <div class="grid">
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=500&q=80" alt="Python Certification">
-                   <h3>Python Programming for Beginners</h3>
-                   <p>Gained foundational knowledge in Python, including data types, functions, and loops. This certification solidified my problem-solving skills and logical reasoning.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?fit=crop&w=500&q=80" alt="Data Science Certification">
-                   <h3>Data Science Essentials</h3>
-                   <p>Covered data analysis, manipulation, and visualization techniques. Developed a strong understanding of data science concepts and tools.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Web Development Certification">
-                   <h3>Web Development Bootcamp</h3>
-                   <p>Learned the essentials of HTML, CSS, JavaScript, and responsive design, building various projects to demonstrate these skills.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Google IT Support">
-                   <h3>Google IT Support Certificate</h3>
-                   <p>Developed skills in IT troubleshooting, networking, and operating systems, gaining a certification recognized globally by Google.</p>
-               </div>
-           </div>
-       </section>
+<!-- Testimonial Start -->
+<div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+  <div class="container">
+    <div class="testimonial-icon">
+      <i class="fa fa-quote-left"></i>
+    </div>
+    <div class="owl-carousel testimonials-carousel">
+      <div class="testimonial-item">
+        <div class="testimonial-img">
+          <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/testimonial-1.jpg?raw=true" alt="Image">
+        </div>
+        <div class="testimonial-text">
+          <p>
+            Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo
+            dictum. Lorem ipsum dolor sit amet consec adipis elit.
+          </p>
+          <h3>Customer Name</h3>
+          <h4>Profession</h4>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-img">
+          <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/testimonial-2.jpg?raw=true" alt="Image">
+        </div>
+        <div class="testimonial-text">
+          <p>
+            Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo
+            dictum. Lorem ipsum dolor sit amet consec adipis elit.
+          </p>
+          <h3>Customer Name</h3>
+          <h4>Profession</h4>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-img">
+          <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/img/testimonial-3.jpg?raw=true" alt="Image">
+        </div>
+        <div class="testimonial-text">
+          <p>
+            Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo
+            dictum. Lorem ipsum dolor sit amet consec adipis elit.
+          </p>
+          <h3>Customer Name</h3>
+          <h4>Profession</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->
 
 
-       <!-- Awards Section -->
-       <section class="fade-in">
-           <h2>Awards & Recognitions</h2>
-           <div class="grid">
-               <div class="card">
-                   <img src="https://github.com/alli-nehavarma/neha-profile/blob/main/images/dps_scholar_certificate.jpg?raw=true" alt="Science Olympiad">
-                   <h3>Science Olympiad Top Performer</h3>
-                   <p>Ranked in the top 5% in a national-level competition, demonstrating a strong grasp of science and analytical skills.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?fit=crop&w=500&q=80" alt="Debate Champion">
-                   <h3>Inter-school Debate Champion</h3>
-                   <p>Earned first place in an inter-school debate competition, showcasing critical thinking and public speaking skills.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Academic Excellence">
-                   <h3>Excellence in Academics</h3>
-                   <p>Received a School Excellence Award for outstanding academic performance and active involvement in extracurricular activities.</p>
-               </div>
-               <div class="card">
-                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=500&q=80" alt="Volunteer Service">
-                   <h3>Volunteer Service Award</h3>
-                   <p>Recognized for community service, including tutoring and organizing events, displaying a strong sense of responsibility.</p>
-               </div>
-           </div>
-       </section>
-   </div>
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="footer-info">
+        <h3>Hyderabad, Telangana, India</h3>
+        <div class="footer-menu">
+          <p>+91 9676763456</p>
+          <p>alli.nehavarma@gmail.com</p>
+        </div>
+        <div class="footer-social">
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
 
 
-   <!-- Footer -->
-   <footer>
-       <p>Connect with me on <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
-   </footer>
+<!-- Back to top button -->
+<a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 
+<!-- Pre Loader -->
+<div id="loader" class="show">
+  <div class="loader"></div>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/typed/typed.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 </html>
